@@ -1,0 +1,8 @@
+G:\Projects\InsightEstimator\Core\Analyzers\bin\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\InsightEstimator\Core\Analyzers\bin\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\InsightEstimator\Core\Analyzers\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\InsightEstimator\Core\Analyzers\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\InsightEstimator\Core\Analyzers\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\InsightEstimator\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\InsightEstimator\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\InsightEstimator\Core\Analyzers\bin\Debug\StructureMap.dll

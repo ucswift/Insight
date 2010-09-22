@@ -1,0 +1,7 @@
+G:\Projects\InsightEstimator\Tests\TestHarness\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projects\InsightEstimator\Tests\TestHarness\bin\Debug\TestHarness.exe
+G:\Projects\InsightEstimator\Tests\TestHarness\bin\Debug\TestHarness.pdb
+G:\Projects\InsightEstimator\Tests\TestHarness\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\InsightEstimator\Tests\TestHarness\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\InsightEstimator\Tests\TestHarness\obj\x86\Debug\TestHarness.exe
+G:\Projects\InsightEstimator\Tests\TestHarness\obj\x86\Debug\TestHarness.pdb

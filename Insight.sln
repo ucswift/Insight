@@ -1,0 +1,175 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2E975E83-39FF-4F27-A874-5E10AD9FC1F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Core\Services\Services.csproj", "{80EDEC1B-C6D9-4443-B7AA-8E500F668353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Core\Model\Model.csproj", "{3C50786E-79D9-458E-8ECB-E634436594DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{82AFEFAB-4109-474A-A114-66AF8505F564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "Tests\UnitTests\UnitTests.csproj", "{76DEE875-9464-4B94-A1D3-1D2521797D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analyzers", "Core\Analyzers\Analyzers.csproj", "{D643ECF1-C831-4E4F-800D-7E090171D573}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EAD4198A-361F-452E-8DD5-3535F2D0174E}"
+	ProjectSection(SolutionItems) = preProject
+		Common\AssemblyInfo.cs = Common\AssemblyInfo.cs
+		Common\Insight-PubPriv-KeyFile.snk = Common\Insight-PubPriv-KeyFile.snk
+		Common\License.txt = Common\License.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{6B3CEDF7-7692-489D-A1AA-6EB36CA896F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnit", "NUnit", "{42AE5D87-DEC3-4E1A-A4ED-329ED5DD842B}"
+	ProjectSection(SolutionItems) = preProject
+		References\NUnit\nunit.framework.dll = References\NUnit\nunit.framework.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Core\Framework\Framework.csproj", "{650F7411-FC66-422B-89AF-3AB86D3CEA63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructureMap", "StructureMap", "{27A17028-1A46-43E9-B22B-A34BE3DACC4C}"
+	ProjectSection(SolutionItems) = preProject
+		References\StructureMap\StructureMap.dll = References\StructureMap\StructureMap.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{461CF205-768C-424E-9A61-EAB5A167BA4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsightWpf", "Applications\InsightWpf\InsightWpf.csproj", "{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Odyssey", "Odyssey", "{CFA74F34-1662-44D6-80D2-75B09B1D8B02}"
+	ProjectSection(SolutionItems) = preProject
+		References\Odyssey\Odyssey.dll = References\Odyssey\Odyssey.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF Toolkit", "WPF Toolkit", "{8C77809B-F2F0-4705-9231-F9A6D8B32F4C}"
+	ProjectSection(SolutionItems) = preProject
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.pdb
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.pdb
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.dll = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.dll = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.dll
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.pdb = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.pdb
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.dll = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.dll = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.dll
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.pdb = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.pdb
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+		References\WPF Toolkit\WPFToolkit.Design.dll = References\WPF Toolkit\WPFToolkit.Design.dll
+		References\WPF Toolkit\WPFToolkit.Design.pdb = References\WPF Toolkit\WPFToolkit.Design.pdb
+		References\WPF Toolkit\WPFToolkit.dll = References\WPF Toolkit\WPFToolkit.dll
+		References\WPF Toolkit\WPFToolkit.pdb = References\WPF Toolkit\WPFToolkit.pdb
+		References\WPF Toolkit\WPFToolkit.VisualStudio.Design.dll = References\WPF Toolkit\WPFToolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\WPFToolkit.VisualStudio.Design.pdb = References\WPF Toolkit\WPFToolkit.VisualStudio.Design.pdb
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness", "Tests\TestHarness\TestHarness.csproj", "{C70ED0CC-959B-446D-B365-6841FED12C61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3C50786E-79D9-458E-8ECB-E634436594DA}.Release|x86.ActiveCfg = Release|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{76DEE875-9464-4B94-A1D3-1D2521797D98}.Release|x86.ActiveCfg = Release|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D643ECF1-C831-4E4F-800D-7E090171D573}.Release|x86.ActiveCfg = Release|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63}.Release|x86.ActiveCfg = Release|Any CPU
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Debug|x86.ActiveCfg = Debug|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Debug|x86.Build.0 = Debug|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Release|Any CPU.ActiveCfg = Release|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Release|x86.ActiveCfg = Release|x86
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17}.Release|x86.Build.0 = Release|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Debug|x86.ActiveCfg = Debug|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Debug|x86.Build.0 = Debug|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Release|Any CPU.ActiveCfg = Release|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Release|x86.ActiveCfg = Release|x86
+		{C70ED0CC-959B-446D-B365-6841FED12C61}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80EDEC1B-C6D9-4443-B7AA-8E500F668353} = {2E975E83-39FF-4F27-A874-5E10AD9FC1F9}
+		{3C50786E-79D9-458E-8ECB-E634436594DA} = {2E975E83-39FF-4F27-A874-5E10AD9FC1F9}
+		{D643ECF1-C831-4E4F-800D-7E090171D573} = {2E975E83-39FF-4F27-A874-5E10AD9FC1F9}
+		{650F7411-FC66-422B-89AF-3AB86D3CEA63} = {2E975E83-39FF-4F27-A874-5E10AD9FC1F9}
+		{76DEE875-9464-4B94-A1D3-1D2521797D98} = {82AFEFAB-4109-474A-A114-66AF8505F564}
+		{C70ED0CC-959B-446D-B365-6841FED12C61} = {82AFEFAB-4109-474A-A114-66AF8505F564}
+		{42AE5D87-DEC3-4E1A-A4ED-329ED5DD842B} = {6B3CEDF7-7692-489D-A1AA-6EB36CA896F6}
+		{27A17028-1A46-43E9-B22B-A34BE3DACC4C} = {6B3CEDF7-7692-489D-A1AA-6EB36CA896F6}
+		{CFA74F34-1662-44D6-80D2-75B09B1D8B02} = {6B3CEDF7-7692-489D-A1AA-6EB36CA896F6}
+		{8C77809B-F2F0-4705-9231-F9A6D8B32F4C} = {6B3CEDF7-7692-489D-A1AA-6EB36CA896F6}
+		{A45594DC-58E4-45A4-8E3A-270B6AB9BF17} = {461CF205-768C-424E-9A61-EAB5A167BA4F}
+	EndGlobalSection
+EndGlobal

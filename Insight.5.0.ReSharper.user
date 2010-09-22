@@ -1,0 +1,245 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="string" priority="8" />
+      <Item value="public" priority="22" />
+      <Item value="int" priority="15" />
+      <Item value="List" priority="3" />
+      <Item value="new" priority="9" />
+      <Item value="List&lt;SourceLine&gt;" priority="0" />
+      <Item value="bool" priority="4" />
+      <Item value="LocReport" priority="0" />
+      <Item value="while" priority="0" />
+      <Item value="line" priority="4" />
+      <Item value="return" priority="8" />
+      <Item value="SourceLine`0" priority="1" />
+      <Item value="SourceLine" priority="0" />
+      <Item value="if" priority="19" />
+      <Item value="sourceLine" priority="4" />
+      <Item value="String`0" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="Comment" priority="0" />
+      <Item value="else" priority="6" />
+      <Item value="OrdinalIgnoreCase" priority="0" />
+      <Item value="false" priority="1" />
+      <Item value="end" priority="1" />
+      <Item value="start" priority="0" />
+      <Item value="const" priority="1" />
+      <Item value="private" priority="0" />
+      <Item value="Dictionary" priority="1" />
+      <Item value="FileTypes`0" priority="4" />
+      <Item value="LocReport`0" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="0" />
+      <Item value="default" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="Dictionary&lt;FileTypes,List&lt;LocReport&gt;&gt;" priority="1" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="foreach" priority="3" />
+      <Item value="FileInfo`0" priority="0" />
+      <Item value="in" priority="3" />
+      <Item value="cSharpFiles" priority="0" />
+      <Item value="fi" priority="0" />
+      <Item value="var" priority="4" />
+      <Item value="List&lt;LocReport&gt;" priority="0" />
+      <Item value="v" priority="3" />
+      <Item value="Dictionary&lt;FileTypes,int&gt;" priority="0" />
+      <Item value="Project`0" priority="0" />
+      <Item value="float" priority="2" />
+      <Item value="Report`0" priority="0" />
+      <Item value="Report" priority="0" />
+      <Item value="report" priority="2" />
+      <Item value="LineTypes`0" priority="2" />
+      <Item value="lineType" priority="2" />
+      <Item value="from" priority="1" />
+      <Item value="where" priority="1" />
+      <Item value="select" priority="0" />
+      <Item value="project" priority="2" />
+      <Item value="fileType" priority="0" />
+      <Item value="ksloc" priority="0" />
+      <Item value="double" priority="0" />
+      <Item value="imagePath" priority="0" />
+      <Item value="ImageFormatConverter`0" priority="0" />
+      <Item value="ImageService`0" priority="0" />
+      <Item value="fileData" priority="0" />
+      <Item value="File`0" priority="1" />
+      <Item value="protected" priority="0" />
+      <Item value="ref" priority="0" />
+      <Item value="Assert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Model.SourceLine">
+      <Item value="Length" priority="0" />
+      <Item value="Empty" priority="0" />
+      <Item value="LineType" priority="3" />
+      <Item value="CommentLength" priority="3" />
+      <Item value="SourceLength" priority="5" />
+      <Item value="TotalLength" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="5" />
+      <Item value="TrimStart`0" priority="0" />
+      <Item value="StartsWith`0" priority="1" />
+      <Item value="IndexOfAny`0" priority="0" />
+      <Item value="IndexOf`0" priority="0" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="Trim`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WaveTech.Insight.Model.LineTypes">
+      <Item value="SourceAndComment" priority="1" />
+      <Item value="Empty" priority="0" />
+      <Item value="Syntax" priority="0" />
+      <Item value="Comment" priority="2" />
+      <Item value="Source" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Analyzers.CSharpLocAnalyzer">
+      <Item value="CompileLocReportForFile`0" priority="0" />
+      <Item value="InspectLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Model.LocReport">
+      <Item value="Lines" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="3" />
+      <Item value="Where`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1">
+      <Item value="EnrichWith`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WaveTech.Insight.Framework.ObjectLocator">
+      <Item value="GetInstance`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Model.Analyzers.ILocAnalyzer">
+      <Item value="CompileLocReportForFile`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WaveTech.Insight.Model.FileTypes">
+      <Item value="CSharp" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileInfo">
+      <Item value="FullName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Value" priority="1" />
+      <Item value="Key" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Sum`1" priority="0" />
+      <Item value="Count`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Model.Project">
+      <Item value="GetTotalLineCount`0" priority="0" />
+      <Item value="EffortAdjustmentFactor" priority="0" />
+      <Item value="ProjectComplexity" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Model.Report">
+      <Item value="PersonMonths" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Bitmap">
+      <Item value="Save`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Imaging.ImageFormat">
+      <Item value="Png" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WaveTech.Insight.Services.ImageService">
+      <Item value="GenerateImage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="ReadAllLines`0" priority="0" />
+      <Item value="Exists`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="NotNull`0" priority="0" />
+      <Item value="AreNotEqual`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Files/f:TestCSharpFile.cs" caret="448" fromTop="19" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/f:FileTypes.cs" caret="0" fromTop="0" />
+      <File id="650F7411-FC66-422B-89AF-3AB86D3CEA63/f:Bootstrapper.cs" caret="479" fromTop="15" />
+      <File id="650F7411-FC66-422B-89AF-3AB86D3CEA63/f:ObjectLocator.cs" caret="808" fromTop="38" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/d:Services/f:IAnalysisService.cs" caret="250" fromTop="7" />
+      <File id="650F7411-FC66-422B-89AF-3AB86D3CEA63/f:FrameworkRegistry.cs" caret="114" fromTop="4" />
+      <File id="A45594DC-58E4-45A4-8E3A-270B6AB9BF17/f:MainWindow.xaml.cs" caret="299" fromTop="9" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/f:LineTypes.cs" caret="210" fromTop="9" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/f:LocReport.cs" caret="225" fromTop="12" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/f:Project.cs" caret="532" fromTop="16" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/d:Services/f:IReportingService.cs" caret="135" fromTop="5" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/f:Report.cs" caret="516" fromTop="17" />
+      <File id="80EDEC1B-C6D9-4443-B7AA-8E500F668353/f:AssemblyInfo.cs/l:..?..?Common?AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="80EDEC1B-C6D9-4443-B7AA-8E500F668353/f:ServicesRegistry.cs" caret="456" fromTop="10" />
+      <File id="80EDEC1B-C6D9-4443-B7AA-8E500F668353/f:ImageService.cs" caret="230" fromTop="7" />
+      <File id="C70ED0CC-959B-446D-B365-6841FED12C61/f:Program.cs" caret="185" fromTop="11" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Services/f:ImageServiceTests.cs" caret="351" fromTop="14" />
+      <File id="A45594DC-58E4-45A4-8E3A-270B6AB9BF17/f:MainWindow.xaml" caret="0" fromTop="0" />
+      <File id="650F7411-FC66-422B-89AF-3AB86D3CEA63/f:EventAggregator.cs" caret="230" fromTop="7" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/d:Analyzers/f:ILocAnalyzer.cs" caret="248" fromTop="5" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/d:Services/f:IImageService.cs" caret="129" fromTop="5" />
+      <File id="80EDEC1B-C6D9-4443-B7AA-8E500F668353/f:ReportingService.cs" caret="178" fromTop="5" />
+      <File id="80EDEC1B-C6D9-4443-B7AA-8E500F668353/f:AnalysisService.cs" caret="1931" fromTop="17" />
+      <File id="EAD4198A-361F-452E-8DD5-3535F2D0174E/f:License.txt/l:G!?Projects?InsightEstimator?Common?License.txt" caret="2659" fromTop="29" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:SqlLocAnalyzer.cs" caret="0" fromTop="0" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:XamlLocAnalyzer.cs" caret="0" fromTop="0" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:AspxLocAnalyzer.cs" caret="0" fromTop="0" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:AnalyzerRegistry.cs" caret="0" fromTop="0" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="2018" fromTop="23" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="4987" fromTop="33" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="3208" fromTop="44" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="768" fromTop="16" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="463" fromTop="0" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="457" fromTop="13" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="327" fromTop="8" />
+      <File id="3C50786E-79D9-458E-8ECB-E634436594DA/d:Analyzers/f:ILocAnalyzer.cs" caret="248" fromTop="5" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="1277" fromTop="26" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="802" fromTop="13" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="1513" fromTop="24" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="2052" fromTop="20" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="2289" fromTop="29" />
+      <File id="80EDEC1B-C6D9-4443-B7AA-8E500F668353/f:AnalysisService.cs" caret="1931" fromTop="17" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="1569" fromTop="11" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="1717" fromTop="15" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="589" fromTop="9" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="2522" fromTop="21" />
+      <File id="EAD4198A-361F-452E-8DD5-3535F2D0174E/f:License.txt/l:G!?Projects?InsightEstimator?Common?License.txt" caret="2659" fromTop="29" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="2694" fromTop="29" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="2819" fromTop="17" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="2971" fromTop="21" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="3236" fromTop="24" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="1817" fromTop="25" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="1976" fromTop="29" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="3324" fromTop="25" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="3156" fromTop="21" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="3409" fromTop="29" />
+      <File id="D643ECF1-C831-4E4F-800D-7E090171D573/f:CSharpLocAnalyzer.cs" caret="2100" fromTop="12" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="3551" fromTop="26" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="3725" fromTop="22" />
+      <File id="76DEE875-9464-4B94-A1D3-1D2521797D98/d:Analyzers/f:CSharpLocAnalyzerTests.cs" caret="4987" fromTop="33" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.5\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

@@ -1,0 +1,13 @@
+G:\Projects\InsightEstimator\Applications\InsightWpf\bin\Debug\Insight.exe
+G:\Projects\InsightEstimator\Applications\InsightWpf\bin\Debug\Insight.pdb
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\MainWindow.baml
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\MainWindow.g.cs
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\App.g.cs
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\Insight_MarkupCompile.cache
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\Insight.g.resources
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\WaveTech.Insight.InsightWpf.Properties.Resources.resources
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\Insight.exe
+G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\Insight.pdb

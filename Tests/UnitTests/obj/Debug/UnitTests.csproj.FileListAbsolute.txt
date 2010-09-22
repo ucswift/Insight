@@ -1,0 +1,16 @@
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\Files\TestCSharpFile.cs
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\UnitTests.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\UnitTests.pdb
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\nunit.framework.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Services.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Services.pdb
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\WaveTech.Insight.Framework.pdb
+G:\Projects\InsightEstimator\Tests\UnitTests\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\InsightEstimator\Tests\UnitTests\obj\Debug\UnitTests.dll
+G:\Projects\InsightEstimator\Tests\UnitTests\obj\Debug\UnitTests.pdb
+G:\Projects\InsightEstimator\Tests\UnitTests\bin\Debug\StructureMap.dll
