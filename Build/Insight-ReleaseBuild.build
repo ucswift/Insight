@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project name="Insight-ReleaseBuild" default="build.all">
+	<property name="tools.msbuild" value="C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" />
+	<property name="input.solution" value="..\Insight.sln" />
+	<property name="output.staging.dir" value="..\Staging" />
+  <tstamp property="build.date" pattern="yyyy.MM.dd_HH.mm" verbose="true" />
+	
+	<target name="build.all">
+	  <echo message="Building Insight Release Build." />
+	  <call target="clean" />
+	  <call target="init" />
+    <call target="version" />
+	  <call target="compile" />
+    <call target="setup" />
+	</target>
+	
+	
+	<target name="clean" description="cleans up folders and solutions" unless="${target::has-executed('clean')}">
+		<echo message="Cleaning up build folders." />
+		<delete dir="${output.staging.dir}" />
+		<echo message="Cleaning the solutione" level="Info" />
+		<exec program="${tools.msbuild}" failonerror="true">
+			<arg value="${input.solution}" />
+			<arg value="/target:Clean" />
+			<arg value="/verbosity:quiet" />
+		</exec>
+		<echo message="Cleaning up build folders." />
+		<delete dir="${output.staging.dir}" />
+	</target>
+	
+	
+	<target name="init" description="initialize the root build folder" depends="clean" unless="${target::has-executed('init')}">
+		<echo message="Creating the root build staging directory." />
+		<mkdir dir="${output.staging.dir}" />
+	</target>
+
+  <target name="version" description="runs the versioning system" depends="init" unless="${target::has-executed('version')}">
+    <echo message="Versioning Solution" />
+    <exec program=".\Tools\VNManager\VNManager.exe" failonerror="true">
+      <arg value="-a..\\Common\\"/>
+    </exec>
+  </target>
+	
+	<target name="compile" description="builds the solution" depends="version" unless="${target::has-executed('compile')}">
+		<echo message="Building the solution with configuration Release" level="Info" />
+		<exec program="${tools.msbuild}" failonerror="true">
+			<arg value="${input.solution}" />
+			<arg value="/verbosity:quiet" />
+			<arg value="/p:Configuration=Release;platform=x86" />
+		</exec>
+	</target>
+
+	<target name="setup" description="stages files for the release build" depends="compile" unless="${target::has-executed('setup')}">
+		<echo message="Moved files to staging area" />
+    <copy todir="${output.staging.dir}\" failonerror="true" >
+      <fileset basedir="..\Common\">
+        <include name="License.txt" />
+      </fileset>
+    </copy>
+	</target>
+  
+</project>
