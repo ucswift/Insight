@@ -1,9 +1,0 @@
-<Modules>
-  <Module PersistentId="3C50786E-79D9-458E-8ECB-E634436594DA" ModuleId="Model" />
-  <Module PersistentId="D643ECF1-C831-4E4F-800D-7E090171D573" ModuleId="Analyzers" />
-  <Module PersistentId="76DEE875-9464-4B94-A1D3-1D2521797D98" ModuleId="UnitTests" />
-  <Module PersistentId="80EDEC1B-C6D9-4443-B7AA-8E500F668353" ModuleId="Services" />
-  <Module PersistentId="650F7411-FC66-422B-89AF-3AB86D3CEA63" ModuleId="Framework" />
-  <Module PersistentId="A45594DC-58E4-45A4-8E3A-270B6AB9BF17" ModuleId="InsightWpf" />
-  <Module PersistentId="C70ED0CC-959B-446D-B365-6841FED12C61" ModuleId="TestHarness" />
-</Modules>
