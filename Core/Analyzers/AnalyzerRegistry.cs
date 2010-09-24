@@ -3,11 +3,12 @@ using WaveTech.Insight.Model.Analyzers;
 
 namespace WaveTech.Insight.Analyzers
 {
-	public class AnalyzerRegistry : Registry
+	internal class AnalyzerRegistry : Registry
 	{
-		protected override void configure()
+		public AnalyzerRegistry()
 		{
-			ForRequestedType<ILocAnalyzer>().TheDefault.Is.OfConcreteType<CSharpLocAnalyzer>().WithName("CSharpLocAnalyzer");
+			For<ILocAnalyzer>().Use<CSharpLocAnalyzer>().Named("CSharpLocAnalyzer");
+			For<ILocAnalyzer>().Use<AspxLocAnalyzer>().Named("AspxLocAnalyzer");
 		}
 	}
 }

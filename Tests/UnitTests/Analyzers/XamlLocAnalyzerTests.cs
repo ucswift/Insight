@@ -7,7 +7,7 @@ namespace UnitTests.Analyzers
 {
 	namespace XamlLocAnalyzerTests
 	{
-		public class with_the_aspx_loc_analyzer : FixtureBase
+		public class with_the_xaml_loc_analyzer : FixtureBase
 		{
 			protected XamlLocAnalyzer locAnalyzer;
 
@@ -34,19 +34,19 @@ namespace UnitTests.Analyzers
 				multipleLines[3] = "   <odc:RibbonGroup Title=\"General\" odc:KeyTip.Key=\"GA\">";
 				multipleLines[4] = "       <odc:RibbonButton Content=\"New\" MinWidth=\"54\" odc:RibbonBar.MinSize=\"Medium\" odc:KeyTip.Key=\"S\" SmallImage=\"img/Files-48x48.png\" LargeImage=\"img/Files-48x48.png\" Command=\"{x:Static local:Commands.NewCommand}\" /><!-- New menu button -->";
 				multipleLines[5] = "       <odc:RibbonButton Content=\"Open\" MinWidth=\"54\" odc:RibbonBar.MinSize=\"Medium\" odc:KeyTip.Key=\"S\" SmallImage=\"img/Folders-32x32.png\" LargeImage=\"img/Folders-32x32.png\" Command=\"{x:Static local:Commands.OpenCommand}\" />";
-				multipleLines[6] = "   <ul>";
-				multipleLines[7] = "   <li>&bull; Access from anywhere, anytime</li>";
-				multipleLines[8] = "   <li>&bull; No maintenance or hassles</li>";
-				multipleLines[9] = "   </ul> <!--End featured-content-->";
-				multipleLines[10] = " </div>";
-				multipleLines[11] = "</div>";
-				multipleLines[12] = " ";
+				multipleLines[6] = "       <odc:RibbonButton Content=\"Save\" MinWidth=\"54\" odc:RibbonBar.MinSize=\"Medium\" odc:KeyTip.Key=\"S\" SmallImage=\"img/Drive-48x48.png\" LargeImage=\"img/Drive-48x48.png\" Command=\"{x:Static local:Commands.SaveCommand}\" />";
+				multipleLines[7] = "   </odc:RibbonGroup>";
+				multipleLines[8] = "</odc:RibbonTabItem>";
+				multipleLines[9] = "<!-- End Home Menugroup -->";
+				multipleLines[10] = " ";
+				multipleLines[11] = "</odc:RibbonBar.Tabs>";
+				multipleLines[12] = "</odc:RibbonBar>";
 
 			}
 		}
 
 		[TestFixture]
-		public class when_analysing_a_aspx_code_line : with_the_aspx_loc_analyzer
+		public class when_analysing_a_xaml_code_line : with_the_xaml_loc_analyzer
 		{
 			[Test]
 			public void should_not_be_null()
@@ -90,7 +90,7 @@ namespace UnitTests.Analyzers
 		}
 
 		[TestFixture]
-		public class when_analysing_a_aspx_comment_line : with_the_aspx_loc_analyzer
+		public class when_analysing_a_xaml_comment_line : with_the_xaml_loc_analyzer
 		{
 			[Test]
 			public void should_not_be_null()
@@ -134,7 +134,7 @@ namespace UnitTests.Analyzers
 		}
 
 		[TestFixture]
-		public class when_analysing_a_aspx_sourceandcomment_line : with_the_aspx_loc_analyzer
+		public class when_analysing_a_xaml_sourceandcomment_line : with_the_xaml_loc_analyzer
 		{
 			[Test]
 			public void should_not_be_null()
@@ -161,24 +161,24 @@ namespace UnitTests.Analyzers
 			}
 
 			[Test]
-			public void should_have_a_comment_length_of_17()
+			public void should_have_a_comment_length_of_18()
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleLineWithComment, ref inMultilineComment);
 
-				Assert.AreEqual(17, line.CommentLength);
+				Assert.AreEqual(18, line.CommentLength);
 			}
 
 			[Test]
-			public void should_have_a_source_length_of_29()
+			public void should_have_a_source_length_of_95()
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleLineWithComment, ref inMultilineComment);
 
-				Assert.AreEqual(29, line.SourceLength);
+				Assert.AreEqual(95, line.SourceLength);
 			}
 		}
 
 		[TestFixture]
-		public class when_analysing_a_mutliple_aspx_lines : with_the_aspx_loc_analyzer
+		public class when_analysing_a_mutliple_xaml_lines : with_the_xaml_loc_analyzer
 		{
 			[Test]
 			public void should_not_be_null()
@@ -209,7 +209,7 @@ namespace UnitTests.Analyzers
 			}
 
 			[Test]
-			public void should_have_1_comment_only_lines()
+			public void should_have_2_comment_only_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -217,11 +217,11 @@ namespace UnitTests.Analyzers
 															 where l.LineType == LineTypes.Comment
 															 select l;
 
-				Assert.AreEqual(1, commentOnlyLines.Count());
+				Assert.AreEqual(2, commentOnlyLines.Count());
 			}
 
 			[Test]
-			public void should_have_2_commentandsource_lines()
+			public void should_have_1_commentandsource_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -229,7 +229,7 @@ namespace UnitTests.Analyzers
 																		where l.LineType == LineTypes.SourceAndComment
 																		select l;
 
-				Assert.AreEqual(2, commentAndSourceLines.Count());
+				Assert.AreEqual(1, commentAndSourceLines.Count());
 			}
 
 			[Test]

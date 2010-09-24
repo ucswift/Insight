@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analyzers\AspxLocAnalyzerTests.cs" />
     <Compile Include="Analyzers\CSharpLocAnalyzerTests.cs" />
+    <Compile Include="Analyzers\XamlLocAnalyzerTests.cs" />
     <Compile Include="Services\ImageServiceTests.cs" />
     <Content Include="Files\TestCSharpFile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

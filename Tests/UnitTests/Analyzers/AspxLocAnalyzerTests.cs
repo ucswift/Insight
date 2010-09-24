@@ -198,7 +198,7 @@ namespace UnitTests.Analyzers
 			}
 
 			[Test]
-			public void should_have_4_source_only_lines()
+			public void should_have_8_source_only_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -206,11 +206,11 @@ namespace UnitTests.Analyzers
 															where l.LineType == LineTypes.Source
 															select l;
 
-				Assert.AreEqual(4, sourceOnlyLines.Count());
+				Assert.AreEqual(8, sourceOnlyLines.Count());
 			}
 
 			[Test]
-			public void should_have_3_comment_only_lines()
+			public void should_have_1_comment_only_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -218,11 +218,11 @@ namespace UnitTests.Analyzers
 															 where l.LineType == LineTypes.Comment
 															 select l;
 
-				Assert.AreEqual(3, commentOnlyLines.Count());
+				Assert.AreEqual(1, commentOnlyLines.Count());
 			}
 
 			[Test]
-			public void should_have_1_commentandsource_lines()
+			public void should_have_2_commentandsource_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -230,11 +230,11 @@ namespace UnitTests.Analyzers
 																		where l.LineType == LineTypes.SourceAndComment
 																		select l;
 
-				Assert.AreEqual(1, commentAndSourceLines.Count());
+				Assert.AreEqual(2, commentAndSourceLines.Count());
 			}
 
 			[Test]
-			public void should_have_3_empty_lines()
+			public void should_have_2_empty_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -242,19 +242,7 @@ namespace UnitTests.Analyzers
 												 where l.LineType == LineTypes.Empty
 												 select l;
 
-				Assert.AreEqual(3, emptyLines.Count());
-			}
-
-			[Test]
-			public void should_have_2_syntax_lines()
-			{
-				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
-
-				var syntaxLines = from l in report.Lines
-													where l.LineType == LineTypes.Syntax
-													select l;
-
-				Assert.AreEqual(2, syntaxLines.Count());
+				Assert.AreEqual(2, emptyLines.Count());
 			}
 		}
 	}

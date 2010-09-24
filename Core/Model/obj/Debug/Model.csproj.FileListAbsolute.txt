@@ -3,3 +3,8 @@ G:\Projects\InsightEstimator\Core\Model\bin\Debug\WaveTech.Insight.Model.pdb
 G:\Projects\InsightEstimator\Core\Model\obj\Debug\ResolveAssemblyReference.cache
 G:\Projects\InsightEstimator\Core\Model\obj\Debug\WaveTech.Insight.Model.dll
 G:\Projects\InsightEstimator\Core\Model\obj\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\Insight\Core\Model\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\Insight\Core\Model\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\Insight\Core\Model\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\Insight\Core\Model\obj\Debug\WaveTech.Insight.Model.dll
+G:\Projects\Insight\Core\Model\obj\Debug\WaveTech.Insight.Model.pdb

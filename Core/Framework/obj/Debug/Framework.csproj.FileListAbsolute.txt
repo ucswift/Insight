@@ -4,3 +4,9 @@ G:\Projects\InsightEstimator\Core\Framework\obj\Debug\ResolveAssemblyReference.c
 G:\Projects\InsightEstimator\Core\Framework\obj\Debug\WaveTech.Insight.Framework.dll
 G:\Projects\InsightEstimator\Core\Framework\obj\Debug\WaveTech.Insight.Framework.pdb
 G:\Projects\InsightEstimator\Core\Framework\bin\Debug\StructureMap.dll
+G:\Projects\Insight\Core\Framework\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Core\Framework\bin\Debug\WaveTech.Insight.Framework.pdb
+G:\Projects\Insight\Core\Framework\bin\Debug\StructureMap.dll
+G:\Projects\Insight\Core\Framework\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\Insight\Core\Framework\obj\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Core\Framework\obj\Debug\WaveTech.Insight.Framework.pdb

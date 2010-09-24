@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\Projects\InsightEstimator\Applications\InsightWpf\obj\x86\Debug\
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\
 WaveTech.Insight.InsightWpf
 none
 false
 DEBUG;TRACE
-G:\Projects\InsightEstimator\Applications\InsightWpf\App.xaml
-11151548125
+G:\Projects\Insight\Applications\InsightWpf\App.xaml
+2-397548783
 
-6-1970791159
-12-1381780322
-MainWindow.xaml;
+8-1031305085
+15707264010
+Forms\ProjectForm.xaml;MainWindow.xaml;
 
-False
+True
 

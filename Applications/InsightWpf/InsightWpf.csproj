@@ -42,6 +42,9 @@
     <AssemblyOriginatorKeyFile>..\..\Common\Insight-PubPriv-KeyFile.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Odyssey">
+      <HintPath>..\..\References\Odyssey\Odyssey.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,12 +58,20 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPF.Themes">
+      <HintPath>..\..\References\WPF Themes\WPF.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Forms\ProjectForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +82,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands.cs" />
+    <Compile Include="Forms\ProjectForm.xaml.cs">
+      <DependentUpon>ProjectForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -100,6 +115,35 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Insight-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Home-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Help-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Open-32x32.png" />
+    <Resource Include="img\Save-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\New-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\About-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Run-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\GetImage-32x32.png" />
+    <Resource Include="img\Report-32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
