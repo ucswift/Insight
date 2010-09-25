@@ -41,6 +41,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\..\Common\Insight-PubPriv-KeyFile.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\..\Images\Insight.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Odyssey">
       <HintPath>..\..\References\Odyssey\Odyssey.dll</HintPath>

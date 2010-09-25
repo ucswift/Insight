@@ -67,7 +67,7 @@ namespace WaveTech.Insight.InsightWpf
 			if (UIContext.Project != null)
 			{
 				if (
-					MessageBox.Show("Are you use you want to close?", "Confirm Close", MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+					MessageBox.Show("Are you use you want to close this project?", "Confirm Close", MessageBoxButton.YesNo, MessageBoxImage.Question) ==
 					MessageBoxResult.Yes)
 				{
 					MainWindow mainWindow = (MainWindow)sender;

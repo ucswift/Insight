@@ -2,9 +2,10 @@
 {
 	public enum FileTypes
 	{
-		CSharp		= 0,
-		Asp				= 1,
-		Xaml			= 2,
-		Sql				= 3
+		CSharp = 0,
+		Aspx = 1,
+		Xaml = 2,
+		Sql = 3,
+		Html = 4
 	}
 }

@@ -184,6 +184,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF Themes", "WPF Themes", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{A55E546B-61F8-47B5-9185-BC354FEFD2B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{43B5DB85-36C8-4BB5-80C2-242DF866FA9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDataRepository", "Repositories\ProjectDataRepository\ProjectDataRepository.csproj", "{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -274,6 +278,16 @@ Global
 		{755D1DE0-C154-45C4-893D-08E6862855E0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{755D1DE0-C154-45C4-893D-08E6862855E0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{755D1DE0-C154-45C4-893D-08E6862855E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -305,5 +319,6 @@ Global
 		{82E2626E-1969-49E7-93DA-9B8DF0DBEF65} = {19CE42F7-B606-4E7F-9244-B02503EC2EC2}
 		{FB91623B-9E64-432D-BAEF-78A4C4DEA85D} = {19CE42F7-B606-4E7F-9244-B02503EC2EC2}
 		{755D1DE0-C154-45C4-893D-08E6862855E0} = {2AE5084A-A202-470A-9E6E-77D8F1BD6CC2}
+		{6850A196-3CC3-4FC0-9740-A1EB5EEEF572} = {43B5DB85-36C8-4BB5-80C2-242DF866FA9B}
 	EndGlobalSection
 EndGlobal

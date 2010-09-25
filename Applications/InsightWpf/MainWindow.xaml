@@ -3,7 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         xmlns:odc="clr-namespace:Odyssey.Controls;assembly=Odyssey" 
         xmlns:local="clr-namespace:WaveTech.Insight.InsightWpf"
-        xmlns:forms="clr-namespace:WaveTech.Insight.InsightWpf.Forms" xmlns:Classes="clr-namespace:WaveTech.Insight.InsightWpf.Classes" Title="Insight Estimator" Height="600" Width="750" MinHeight="600" MinWidth="750">
+        xmlns:forms="clr-namespace:WaveTech.Insight.InsightWpf.Forms" 
+        xmlns:Classes="clr-namespace:WaveTech.Insight.InsightWpf.Classes" 
+        Title="Insight Estimator" Height="600" Width="750" MinHeight="600" MinWidth="750"
+         ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid odc:ImageRenderOptions.LargeImageScalingMode="NearestNeighbor" odc:RibbonChrome.IsGrayScaleEnabled="true"
 			DataContext="{Binding ElementName=main}">
