@@ -54,7 +54,9 @@
     <Compile Include="LineTypes.cs" />
     <Compile Include="LocReport.cs" />
     <Compile Include="Project.cs" />
+    <Compile Include="Providers\ISerializationProvider.cs" />
     <Compile Include="Report.cs" />
+    <Compile Include="Repositories\IProjectRepository.cs" />
     <Compile Include="Services\IAnalysisService.cs" />
     <Compile Include="Services\IImageService.cs" />
     <Compile Include="Services\IReportingService.cs" />
