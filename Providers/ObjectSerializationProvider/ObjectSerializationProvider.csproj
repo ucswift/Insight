@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}</ProjectGuid>
+    <ProjectGuid>{5B31322C-C8DA-4431-9E76-C8687275ADBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WaveTech.Insight.Repositories.ProjectDataRepository</RootNamespace>
-    <AssemblyName>WaveTech.Insight.Repositories.ProjectDataRepository</AssemblyName>
+    <RootNamespace>WaveTech.Insight.Providers.ObjectSerializationProvider</RootNamespace>
+    <AssemblyName>WaveTech.Insight.Providers.ObjectSerializationProvider</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,8 +52,8 @@
     <Compile Include="..\..\Common\AssemblyInfo.cs">
       <Link>AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="ProjectRepository.cs" />
-    <Compile Include="RepositoryRegistry.cs" />
+    <Compile Include="ProviderRegistry.cs" />
+    <Compile Include="SerializationProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Common\Insight-PubPriv-KeyFile.snk">
