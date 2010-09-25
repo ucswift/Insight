@@ -1,13 +1,12 @@
-﻿using StructureMap.Attributes;
-using StructureMap.Configuration.DSL;
+﻿using StructureMap.Configuration.DSL;
 
 namespace WaveTech.Insight.Framework
 {
 	public class FrameworkRegistry : Registry
 	{
-		protected override void configure()
+		public FrameworkRegistry()
 		{
-			ForRequestedType<IEventAggregator>().TheDefaultIsConcreteType<EventAggregator>().CacheBy(InstanceScope.Singleton);
+			For<IEventAggregator>().Singleton().Use<EventAggregator>();
 		}
 	}
 }

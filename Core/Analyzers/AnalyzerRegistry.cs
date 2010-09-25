@@ -3,7 +3,7 @@ using WaveTech.Insight.Model.Analyzers;
 
 namespace WaveTech.Insight.Analyzers
 {
-	internal class AnalyzerRegistry : Registry
+	public class AnalyzerRegistry : Registry
 	{
 		public AnalyzerRegistry()
 		{

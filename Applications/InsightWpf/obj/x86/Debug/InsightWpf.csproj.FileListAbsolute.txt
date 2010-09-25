@@ -31,3 +31,12 @@ G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WPFToolkit.pdb
 G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Insight_MarkupCompile.lref
 G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Forms\ProjectForm.baml
 G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Forms\ProjectForm.g.cs
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Themes\Generic.baml
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\StructureMap.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Framework.pdb
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Windows\AboutBox.baml
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Windows\AboutBox.g.cs

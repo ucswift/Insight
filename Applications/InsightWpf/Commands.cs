@@ -1,4 +1,7 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
+using WaveTech.Insight.InsightWpf.Classes;
+using WaveTech.Insight.InsightWpf.Windows;
 
 namespace WaveTech.Insight.InsightWpf
 {
@@ -13,6 +16,9 @@ namespace WaveTech.Insight.InsightWpf
 
 		public static readonly RoutedUICommand OpenCommand = new RoutedUICommand("Open", "OpenCommand", typeof(MainWindow),
 				new InputGestureCollection(new KeyGesture[] { new KeyGesture(Key.O, ModifierKeys.Control, "Ctrl+O") }));
+
+		public static readonly RoutedUICommand CloseCommand = new RoutedUICommand("Close", "CloseCommand", typeof(MainWindow),
+				new InputGestureCollection(new KeyGesture[] { new KeyGesture(Key.O, ModifierKeys.Control, "Ctrl+C") }));
 
 		public static readonly RoutedUICommand HomeCommand = new RoutedUICommand("Home", "HomeCommand", typeof(MainWindow),
 				new InputGestureCollection(new KeyGesture[] { new KeyGesture(Key.E, ModifierKeys.Control, "Ctrl+H") }));
@@ -30,6 +36,7 @@ namespace WaveTech.Insight.InsightWpf
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(SaveCommand, SaveProject));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(NewCommand, NewProject));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(OpenCommand, OpenProject));
+			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(CloseCommand, CloseProject));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(HomeCommand, Home));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(HelpCommand, Help));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(AboutCommand, About));
@@ -44,12 +51,31 @@ namespace WaveTech.Insight.InsightWpf
 
 		private static void NewProject(object sender, ExecutedRoutedEventArgs e)
 		{
+			UIContext.SetNewProject();
 
+			MainWindow mainWindow = (MainWindow)sender;
+			mainWindow.Initalize();
 		}
 
 		private static void OpenProject(object sender, ExecutedRoutedEventArgs e)
 		{
 
+		}
+
+		private static void CloseProject(object sender, ExecutedRoutedEventArgs e)
+		{
+			if (UIContext.Project != null)
+			{
+				if (
+					MessageBox.Show("Are you use you want to close?", "Confirm Close", MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+					MessageBoxResult.Yes)
+				{
+					MainWindow mainWindow = (MainWindow)sender;
+					mainWindow.contentRoot.Content = null;
+
+					UIContext.Project = null;
+				}
+			}
 		}
 
 		private static void Home(object sender, ExecutedRoutedEventArgs e)
@@ -59,7 +85,10 @@ namespace WaveTech.Insight.InsightWpf
 
 		private static void About(object sender, ExecutedRoutedEventArgs e)
 		{
+			MainWindow mainWindow = (MainWindow)sender;
 
+			AboutBox about = new AboutBox(mainWindow);
+			about.ShowDialog();
 		}
 
 		private static void Help(object sender, ExecutedRoutedEventArgs e)

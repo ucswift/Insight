@@ -17,7 +17,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Controls:ExperienceControl}">
-                    <Border Name="Border" Background="{StaticResource WindowBackgroundBrush}" BorderBrush="{StaticResource SolidBorderBrush}"
+                    <Border Name="Border" Background="Transparent" BorderBrush="{StaticResource SolidBorderBrush}"
                         BorderThickness="1" CornerRadius="2">
                             <StackPanel Margin="2" IsItemsHost="True" Orientation="Horizontal" />
                     </Border>

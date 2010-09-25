@@ -5,11 +5,11 @@ namespace WaveTech.Insight.Services
 {
 	public class ServicesRegistry : Registry
 	{
-		protected override void configure()
+		public ServicesRegistry()
 		{
-			ForRequestedType<IAnalysisService>().TheDefault.Is.OfConcreteType<AnalysisService>();
-			ForRequestedType<IImageService>().TheDefault.Is.OfConcreteType<ImageService>();
-			ForRequestedType<IReportingService>().TheDefault.Is.OfConcreteType<ReportingService>();
+			For<IAnalysisService>().Use<AnalysisService>();
+			For<IImageService>().Use<ImageService>();
+			For<IReportingService>().Use<ReportingService>();
 		}
 	}
 }

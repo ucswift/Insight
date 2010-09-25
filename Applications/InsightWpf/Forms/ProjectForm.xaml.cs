@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WaveTech.Insight.InsightWpf.Classes;
+using WaveTech.Insight.Model;
 
 namespace WaveTech.Insight.InsightWpf.Forms
 {
@@ -19,9 +10,30 @@ namespace WaveTech.Insight.InsightWpf.Forms
 	/// </summary>
 	public partial class ProjectForm : UserControl
 	{
+		#region Dependency Properties
+		public static readonly DependencyProperty ProjectProperty =
+		DependencyProperty.Register("Project", typeof(Project), typeof(ProjectForm),
+		new FrameworkPropertyMetadata(
+				null,
+				FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,
+				ProjectPropertyChanged));
+
+		public Project Project
+		{
+			get { return (Project)GetValue(ProjectProperty); }
+			set { SetValue(ProjectProperty, value); }
+		}
+
+		private static void ProjectPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+		{
+
+		}
+		#endregion Dependency Properties
+
 		public ProjectForm()
 		{
 			InitializeComponent();
+			WindowHelper.CheckAndApplyTheme(this);
 		}
 	}
 }

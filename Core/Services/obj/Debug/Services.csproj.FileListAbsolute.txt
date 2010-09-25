@@ -10,7 +10,6 @@ G:\Projects\InsightEstimator\Core\Services\obj\Debug\WaveTech.Insight.Services.p
 G:\Projects\InsightEstimator\Core\Services\bin\Debug\StructureMap.dll
 G:\Projects\Insight\Core\Services\bin\Debug\WaveTech.Insight.Services.dll
 G:\Projects\Insight\Core\Services\bin\Debug\WaveTech.Insight.Services.pdb
-G:\Projects\Insight\Core\Services\bin\Debug\StructureMap.dll
 G:\Projects\Insight\Core\Services\bin\Debug\WaveTech.Insight.Framework.dll
 G:\Projects\Insight\Core\Services\bin\Debug\WaveTech.Insight.Model.dll
 G:\Projects\Insight\Core\Services\bin\Debug\WaveTech.Insight.Framework.pdb

@@ -76,9 +76,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness", "Tests\TestHarness\TestHarness.csproj", "{C70ED0CC-959B-446D-B365-6841FED12C61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E2CAC0C-3844-451C-B503-ADE4240711D1}"
-	ProjectSection(SolutionItems) = preProject
-		README = README
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{77EF785B-C026-483D-B315-8D9F0EF76017}"
 	ProjectSection(SolutionItems) = preProject
@@ -186,9 +183,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF Themes", "WPF Themes", "{B973DC50-8262-4D0F-B7A6-48A23957DE6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{A55E546B-61F8-47B5-9185-BC354FEFD2B1}"
-	ProjectSection(SolutionItems) = preProject
-		Images\Insight.ico = Images\Insight.ico
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

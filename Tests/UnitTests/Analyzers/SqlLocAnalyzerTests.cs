@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
 using WaveTech.Insight.Analyzers;
+using WaveTech.Insight.Model;
 
 namespace UnitTests.Analyzers
 {
@@ -9,14 +11,14 @@ namespace UnitTests.Analyzers
 		{
 			protected SqlLocAnalyzer locAnalyzer;
 
-			protected string singleLine = "<Grid odc:ImageRenderOptions.LargeImageScalingMode=\"NearestNeighbor\" odc:RibbonChrome.IsGrayScaleEnabled=\"true\" DataContext=\"{Binding ElementName=main}\">";
-			protected string singleCommentLine = "<!--Just a comment about some code -->";
-			protected string singleLineWithComment = "<odc:RibbonToolTip Title=\"Application Menu\" Description=\"Click here to save, open or exit.\" /> <!-- Main menu tooltip-->";
+			protected string singleLine = "SELECT TOP 1000 * FROM dbo.Customers";
+			protected string singleCommentLine = "-- Just a comment about some code";
+			protected string singleLineWithComment = "SELECT TOP 1000 * FROM dbo.Customers /* Main menu tooltip */";
 			protected string[] multipleLines;
 
 			protected bool inMultilineComment;
 
-			protected int commentSyntaxLength = 7;
+			protected int commentSyntaxLength = 2;
 
 			protected override void Before_each_test()
 			{
@@ -27,18 +29,18 @@ namespace UnitTests.Analyzers
 
 				multipleLines = new string[13];
 				multipleLines[0] = "";
-				multipleLines[1] = "<!--Home menu bar group-->";
-				multipleLines[2] = "<odc:RibbonTabItem Title=\"Home\" odc:KeyTip.Key=\"H\">";
-				multipleLines[3] = "   <odc:RibbonGroup Title=\"General\" odc:KeyTip.Key=\"GA\">";
-				multipleLines[4] = "       <odc:RibbonButton Content=\"New\" MinWidth=\"54\" odc:RibbonBar.MinSize=\"Medium\" odc:KeyTip.Key=\"S\" SmallImage=\"img/Files-48x48.png\" LargeImage=\"img/Files-48x48.png\" Command=\"{x:Static local:Commands.NewCommand}\" /><!-- New menu button -->";
-				multipleLines[5] = "       <odc:RibbonButton Content=\"Open\" MinWidth=\"54\" odc:RibbonBar.MinSize=\"Medium\" odc:KeyTip.Key=\"S\" SmallImage=\"img/Folders-32x32.png\" LargeImage=\"img/Folders-32x32.png\" Command=\"{x:Static local:Commands.OpenCommand}\" />";
-				multipleLines[6] = "       <odc:RibbonButton Content=\"Save\" MinWidth=\"54\" odc:RibbonBar.MinSize=\"Medium\" odc:KeyTip.Key=\"S\" SmallImage=\"img/Drive-48x48.png\" LargeImage=\"img/Drive-48x48.png\" Command=\"{x:Static local:Commands.SaveCommand}\" />";
-				multipleLines[7] = "   </odc:RibbonGroup>";
-				multipleLines[8] = "</odc:RibbonTabItem>";
-				multipleLines[9] = "<!-- End Home Menugroup -->";
+				multipleLines[1] = "/****** Object:  StoredProcedure [dbo].[MyCoolSproc]    Script Date: 01/01/2010 18:21:00 ******/";
+				multipleLines[2] = "SET QUOTED_IDENTIFIER OFF";
+				multipleLines[3] = "GO";
+				multipleLines[4] = "-- This Sproc does cool stuff";
+				multipleLines[5] = "PROCEDURE [dbo].[MyCoolSproc]";
+				multipleLines[6] = "SELECT Name,Address,Money TOP 100000 FROM dbo.Customers c";
+				multipleLines[7] = "    INNER JOIN dbo.AllTheCustomersMoney atcm ON c.CustomerId = atcm.CustomerId";
+				multipleLines[8] = "    INNER JOIN dbo.Addresses a ON a.CustomerId = c.CustomerId";
+				multipleLines[9] = "ORDER BY NAME DESC; /* We need their money in alphabetical order */";
 				multipleLines[10] = " ";
-				multipleLines[11] = "</odc:RibbonBar.Tabs>";
-				multipleLines[12] = "</odc:RibbonBar>";
+				multipleLines[11] = "-- Were finished in this SPROC --";
+				multipleLines[12] = "";
 
 			}
 		}
@@ -111,7 +113,7 @@ namespace UnitTests.Analyzers
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleCommentLine, ref inMultilineComment);
 
-				Assert.AreEqual(singleCommentLine.Length - commentSyntaxLength, line.TotalLength);
+				Assert.AreEqual(singleCommentLine.Length, line.TotalLength);
 			}
 
 			[Test]
@@ -119,7 +121,7 @@ namespace UnitTests.Analyzers
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleCommentLine, ref inMultilineComment);
 
-				Assert.AreEqual(singleCommentLine.Length - commentSyntaxLength, line.CommentLength);
+				Assert.AreEqual(singleCommentLine.Length, line.CommentLength);
 			}
 
 			[Test]
@@ -155,23 +157,23 @@ namespace UnitTests.Analyzers
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleLineWithComment, ref inMultilineComment);
 
-				Assert.AreEqual(singleLineWithComment.Length - commentSyntaxLength, line.TotalLength);
+				Assert.AreEqual(singleLineWithComment.Length - commentSyntaxLength * 2, line.TotalLength);
 			}
 
 			[Test]
-			public void should_have_a_comment_length_of_18()
+			public void should_have_a_comment_length_of_19()
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleLineWithComment, ref inMultilineComment);
 
-				Assert.AreEqual(18, line.CommentLength);
+				Assert.AreEqual(19, line.CommentLength);
 			}
 
 			[Test]
-			public void should_have_a_source_length_of_95()
+			public void should_have_a_source_length_of_37()
 			{
 				SourceLine line = locAnalyzer.InspectLine(singleLineWithComment, ref inMultilineComment);
 
-				Assert.AreEqual(95, line.SourceLength);
+				Assert.AreEqual(37, line.SourceLength);
 			}
 		}
 
@@ -195,7 +197,7 @@ namespace UnitTests.Analyzers
 			}
 
 			[Test]
-			public void should_have_8_source_only_lines()
+			public void should_have_6_source_only_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -203,11 +205,11 @@ namespace UnitTests.Analyzers
 															where l.LineType == LineTypes.Source
 															select l;
 
-				Assert.AreEqual(8, sourceOnlyLines.Count());
+				Assert.AreEqual(6, sourceOnlyLines.Count());
 			}
 
 			[Test]
-			public void should_have_2_comment_only_lines()
+			public void should_have_3_comment_only_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -215,7 +217,7 @@ namespace UnitTests.Analyzers
 															 where l.LineType == LineTypes.Comment
 															 select l;
 
-				Assert.AreEqual(2, commentOnlyLines.Count());
+				Assert.AreEqual(3, commentOnlyLines.Count());
 			}
 
 			[Test]
@@ -231,7 +233,7 @@ namespace UnitTests.Analyzers
 			}
 
 			[Test]
-			public void should_have_2_empty_lines()
+			public void should_have_3_empty_lines()
 			{
 				LocReport report = locAnalyzer.CompileLocReport(multipleLines);
 
@@ -239,7 +241,7 @@ namespace UnitTests.Analyzers
 												 where l.LineType == LineTypes.Empty
 												 select l;
 
-				Assert.AreEqual(2, emptyLines.Count());
+				Assert.AreEqual(3, emptyLines.Count());
 			}
 		}
 	}

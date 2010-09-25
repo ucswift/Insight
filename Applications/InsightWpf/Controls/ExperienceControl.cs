@@ -101,7 +101,7 @@ namespace WaveTech.Insight.InsightWpf.Controls
 				Rectangle item = new Rectangle();
 
 				item.Width = 10;
-				item.Height = 5 * (i / 1.5) + 5;
+				item.Height = 5 * (i / 1.75) + 5;
 				item.Margin = new Thickness(1);
 				item.Fill = new SolidColorBrush(_States[i].Color);
 
