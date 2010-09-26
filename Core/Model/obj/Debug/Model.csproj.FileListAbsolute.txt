@@ -8,3 +8,6 @@ G:\Projects\Insight\Core\Model\bin\Debug\WaveTech.Insight.Model.pdb
 G:\Projects\Insight\Core\Model\obj\Debug\ResolveAssemblyReference.cache
 G:\Projects\Insight\Core\Model\obj\Debug\WaveTech.Insight.Model.dll
 G:\Projects\Insight\Core\Model\obj\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\Insight\Core\Model\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Core\Model\bin\Debug\StructureMap.dll
+G:\Projects\Insight\Core\Model\bin\Debug\WaveTech.Insight.Framework.pdb

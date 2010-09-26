@@ -71,6 +71,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Block.xaml.cs">
+      <DependentUpon>Block.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AboutBox.xaml.cs">
       <DependentUpon>AboutBox.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Block.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LoadingAnimation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +188,10 @@
     <Resource Include="img\Close-32x32.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\Analyzers\Analyzers.csproj">
+      <Project>{D643ECF1-C831-4E4F-800D-7E090171D573}</Project>
+      <Name>Analyzers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Framework\Framework.csproj">
       <Project>{650F7411-FC66-422B-89AF-3AB86D3CEA63}</Project>
       <Name>Framework</Name>
@@ -181,6 +199,18 @@
     <ProjectReference Include="..\..\Core\Model\Model.csproj">
       <Project>{3C50786E-79D9-458E-8ECB-E634436594DA}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Services\Services.csproj">
+      <Project>{80EDEC1B-C6D9-4443-B7AA-8E500F668353}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Providers\ObjectSerializationProvider\ObjectSerializationProvider.csproj">
+      <Project>{5B31322C-C8DA-4431-9E76-C8687275ADBA}</Project>
+      <Name>ObjectSerializationProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\ProjectDataRepository\ProjectDataRepository.csproj">
+      <Project>{6850A196-3CC3-4FC0-9740-A1EB5EEEF572}</Project>
+      <Name>ProjectDataRepository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

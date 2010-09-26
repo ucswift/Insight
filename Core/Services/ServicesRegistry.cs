@@ -10,6 +10,7 @@ namespace WaveTech.Insight.Services
 			For<IAnalysisService>().Use<AnalysisService>();
 			For<IImageService>().Use<ImageService>();
 			For<IReportingService>().Use<ReportingService>();
+			For<IProjectService>().Use<ProjectService>();
 		}
 	}
 }

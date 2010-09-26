@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="AnalysisService.cs" />
     <Compile Include="ImageService.cs" />
+    <Compile Include="ProjectService.cs" />
     <Compile Include="ReportingService.cs" />
     <Compile Include="ServicesRegistry.cs" />
   </ItemGroup>

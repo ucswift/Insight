@@ -59,6 +59,7 @@
     <Compile Include="Repositories\IProjectRepository.cs" />
     <Compile Include="Services\IAnalysisService.cs" />
     <Compile Include="Services\IImageService.cs" />
+    <Compile Include="Services\IProjectService.cs" />
     <Compile Include="Services\IReportingService.cs" />
     <Compile Include="SourceLine.cs" />
   </ItemGroup>
@@ -69,6 +70,12 @@
     <None Include="..\..\Common\Insight-PubPriv-KeyFile.snk">
       <Link>Insight-PubPriv-KeyFile.snk</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{650F7411-FC66-422B-89AF-3AB86D3CEA63}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,3 +13,5 @@ G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Model.pdb
 G:\Projects\Insight\Core\Analyzers\obj\Debug\ResolveAssemblyReference.cache
 G:\Projects\Insight\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.dll
 G:\Projects\Insight\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Framework.pdb

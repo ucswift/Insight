@@ -1,7 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using Microsoft.Win32;
+using WaveTech.Insight.Framework;
 using WaveTech.Insight.InsightWpf.Classes;
 using WaveTech.Insight.InsightWpf.Windows;
+using WaveTech.Insight.Model.Services;
 
 namespace WaveTech.Insight.InsightWpf
 {
@@ -46,7 +49,20 @@ namespace WaveTech.Insight.InsightWpf
 		#region Private Event Handlers
 		private static void SaveProject(object sender, ExecutedRoutedEventArgs e)
 		{
+			if (UIContext.Project != null)
+			{
 
+				SaveFileDialog dialog = new SaveFileDialog();
+				dialog.DefaultExt = ".ins";
+				dialog.Filter = "Insight Projects (.ins)|*.ins";
+
+				bool? result = dialog.ShowDialog();
+				if (result == true)
+				{
+					IProjectService projectService = ObjectLocator.GetInstance<IProjectService>();
+					projectService.SaveProject(UIContext.Project, dialog.FileName);
+				}
+			}
 		}
 
 		private static void NewProject(object sender, ExecutedRoutedEventArgs e)

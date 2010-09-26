@@ -40,3 +40,15 @@ G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Framework
 G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Model.pdb
 G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Windows\AboutBox.baml
 G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\Windows\AboutBox.g.cs
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\UserControls\Block.baml
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\UserControls\Block.g.cs
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\UserControls\LoadingAnimation.g.cs
+G:\Projects\Insight\Applications\InsightWpf\obj\x86\Debug\UserControls\LoadingAnimation.baml
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Providers.ObjectSerializationProvider.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Repositories.ProjectDataRepository.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Services.dll
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Services.pdb
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Providers.ObjectSerializationProvider.pdb
+G:\Projects\Insight\Applications\InsightWpf\bin\Debug\WaveTech.Insight.Repositories.ProjectDataRepository.pdb

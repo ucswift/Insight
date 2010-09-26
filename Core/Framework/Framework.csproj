@@ -51,6 +51,7 @@
       <Link>AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="DictionaryProxy.cs" />
     <Compile Include="EventAggregator.cs" />
     <Compile Include="FrameworkRegistry.cs" />
     <Compile Include="ObjectLocator.cs" />

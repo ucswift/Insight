@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 G:\Projects\Insight\Applications\InsightWpf\App.xaml
-41126332386
+6-1172588577
 
-14-1432879577
-17-370688357
-Forms\ProjectForm.xaml;MainWindow.xaml;Themes\Generic.xaml;Windows\AboutBox.xaml;
+16-157051410
+21-608250157
+Forms\ProjectForm.xaml;MainWindow.xaml;Themes\Generic.xaml;UserControls\Block.xaml;UserControls\LoadingAnimation.xaml;Windows\AboutBox.xaml;
 
 False
 
