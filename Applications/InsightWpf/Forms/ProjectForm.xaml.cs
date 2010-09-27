@@ -35,5 +35,10 @@ namespace WaveTech.Insight.InsightWpf.Forms
 			InitializeComponent();
 			WindowHelper.CheckAndApplyTheme(this);
 		}
+
+		private void ComplexityRadioButton_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

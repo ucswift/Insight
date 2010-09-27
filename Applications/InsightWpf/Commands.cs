@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using WaveTech.Insight.Framework;
 using WaveTech.Insight.InsightWpf.Classes;
 using WaveTech.Insight.InsightWpf.Windows;
+using WaveTech.Insight.Model;
 using WaveTech.Insight.Model.Services;
 
 namespace WaveTech.Insight.InsightWpf
@@ -51,7 +52,6 @@ namespace WaveTech.Insight.InsightWpf
 		{
 			if (UIContext.Project != null)
 			{
-
 				SaveFileDialog dialog = new SaveFileDialog();
 				dialog.DefaultExt = ".ins";
 				dialog.Filter = "Insight Projects (.ins)|*.ins";
@@ -75,7 +75,23 @@ namespace WaveTech.Insight.InsightWpf
 
 		private static void OpenProject(object sender, ExecutedRoutedEventArgs e)
 		{
+			OpenFileDialog dialog = new OpenFileDialog();
+			dialog.DefaultExt = ".ins";
+			dialog.Filter = "Insight Projects (.ins)|*.ins";
 
+			bool? result = dialog.ShowDialog();
+			if (result == true)
+			{
+				string filePath = dialog.FileName;
+
+				IProjectService projectService = ObjectLocator.GetInstance<IProjectService>();
+
+				Project prj = projectService.GetProject(filePath);
+				UIContext.Project = prj;
+
+				MainWindow mainWindow = (MainWindow)sender;
+				mainWindow.Initalize();
+			}
 		}
 
 		private static void CloseProject(object sender, ExecutedRoutedEventArgs e)
@@ -96,7 +112,7 @@ namespace WaveTech.Insight.InsightWpf
 
 		private static void Home(object sender, ExecutedRoutedEventArgs e)
 		{
-
+			System.Diagnostics.Process.Start("http://www.wtdt.com/Products/OSSUtilities/InsightEstimator.aspx");
 		}
 
 		private static void About(object sender, ExecutedRoutedEventArgs e)

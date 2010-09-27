@@ -7,7 +7,9 @@ namespace WaveTech.Insight.Model
 	public class Project
 	{
 		public string Name { get; set; }
+		public string DirectoryRoot { get; set; }
 		public float CostPerHour { get; set; }
+
 		public DictionaryProxy<FileTypes, int> CodeWeighting { get; set; }
 		public DictionaryProxy<FileTypes, List<LocReport>> Sloc { get; set; }
 
