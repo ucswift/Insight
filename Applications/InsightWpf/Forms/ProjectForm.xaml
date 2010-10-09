@@ -22,7 +22,7 @@
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
+            <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
@@ -51,11 +51,11 @@
 
                 <GroupBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Header="File Types to Process" Foreground="Black">
                     <WrapPanel>
-                        <CheckBox Content="C# Files (*.cs)" Margin="4,4,4,4" />
-                        <CheckBox Content="Xaml Files (*.xaml)" Margin="4,4,4,4" />
-                        <CheckBox Content="Aspx Files (*.aspx)" Margin="4,4,4,4" />
-                        <CheckBox Content="HTML Files (*.htm/*.html)" Margin="4,4,4,4" />
-                        <CheckBox Content="SQL Files (*.sql)" Margin="4,4,4,4" />
+                        <CheckBox x:Name="chkCSharp" Content="C# Files (*.cs)" Margin="4,4,4,4" Click="chkCSharp_Click" />
+												<CheckBox x:Name="chkXaml" Content="Xaml Files (*.xaml)" Margin="4,4,4,4" Click="chkXaml_Click" />
+												<CheckBox x:Name="chkAspx" Content="Aspx Files (*.aspx)" Margin="4,4,4,4" Click="chkAspx_Click" />
+												<CheckBox x:Name="chkHtml" Content="HTML Files (*.htm/*.html)" Margin="4,4,4,4" Click="chkHtml_Click" />
+												<CheckBox x:Name="chkSql" Content="SQL Files (*.sql)" Margin="4,4,4,4" Click="chkSql_Click" />
                     </WrapPanel>
                 </GroupBox>
             </Grid>

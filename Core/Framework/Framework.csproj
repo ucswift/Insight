@@ -37,7 +37,9 @@
     <AssemblyOriginatorKeyFile>..\..\Common\Insight-PubPriv-KeyFile.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StructureMap, Version=2.6.1.1, Culture=neutral, PublicKeyToken=d9e244627cc0a396, processorArchitecture=MSIL" />
+    <Reference Include="StructureMap">
+      <HintPath>..\..\References\StructureMap\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

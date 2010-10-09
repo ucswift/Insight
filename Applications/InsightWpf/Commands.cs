@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Input;
 using Microsoft.Win32;
 using WaveTech.Insight.Framework;
@@ -32,6 +33,9 @@ namespace WaveTech.Insight.InsightWpf
 
 		public static readonly RoutedUICommand AboutCommand = new RoutedUICommand("About", "AboutCommand", typeof(MainWindow),
 				new InputGestureCollection(new KeyGesture[] { new KeyGesture(Key.E, ModifierKeys.Control, "Ctrl+A") }));
+
+		public static readonly RoutedUICommand ProcessCommand = new RoutedUICommand("Process", "ProcessCommand", typeof(MainWindow),
+				new InputGestureCollection(new KeyGesture[] { new KeyGesture(Key.E, ModifierKeys.Control, "Ctrl+P") }));
 		#endregion Command Routers
 
 		#region Constructor
@@ -44,6 +48,7 @@ namespace WaveTech.Insight.InsightWpf
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(HomeCommand, Home));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(HelpCommand, Help));
 			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(AboutCommand, About));
+			CommandManager.RegisterClassCommandBinding(typeof(MainWindow), new CommandBinding(ProcessCommand, Process));
 		}
 		#endregion Constructor
 
@@ -126,6 +131,16 @@ namespace WaveTech.Insight.InsightWpf
 		private static void Help(object sender, ExecutedRoutedEventArgs e)
 		{
 
+		}
+
+		private static void Process(object sender, ExecutedRoutedEventArgs e)
+		{
+			if (UIContext.Project != null)
+			{
+				IAnalysisService analysisService = ObjectLocator.GetInstance<IAnalysisService>();
+				UIContext.Project.Sloc = new DictionaryProxy<FileTypes, List<LocReport>>(analysisService.AnalyzeDirectory(UIContext.Project.DirectoryRoot,
+																																	UIContext.Project.GetExtensionsToProcess()));
+			}
 		}
 		#endregion Private Event Handlers
 	}

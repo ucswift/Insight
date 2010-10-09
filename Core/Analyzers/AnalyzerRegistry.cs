@@ -9,6 +9,8 @@ namespace WaveTech.Insight.Analyzers
 		{
 			For<ILocAnalyzer>().Use<CSharpLocAnalyzer>().Named("CSharpLocAnalyzer");
 			For<ILocAnalyzer>().Use<AspxLocAnalyzer>().Named("AspxLocAnalyzer");
+			For<ILocAnalyzer>().Use<SqlLocAnalyzer>().Named("SqlLocAnalyzer");
+			For<ILocAnalyzer>().Use<XamlLocAnalyzer>().Named("XamlLocAnalyzer");
 		}
 	}
 }

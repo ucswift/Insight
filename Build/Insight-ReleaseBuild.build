@@ -11,13 +11,20 @@
 	  <call target="init" />
     <call target="version" />
 	  <call target="compile" />
-    <call target="setup" />
+    <call target="stage" />
+		<call target="zip" />
+		<call target="deploy" />
 	</target>
 	
 	
 	<target name="clean" description="cleans up folders and solutions" unless="${target::has-executed('clean')}">
 		<echo message="Cleaning up build folders." />
 		<delete dir="${output.staging.dir}" />
+		<delete>
+			<fileset>
+				<include name="*.zip" />
+			</fileset>
+		</delete>
 		<echo message="Cleaning the solutione" level="Info" />
 		<exec program="${tools.msbuild}" failonerror="true">
 			<arg value="${input.solution}" />
@@ -50,13 +57,42 @@
 		</exec>
 	</target>
 
-	<target name="setup" description="stages files for the release build" depends="compile" unless="${target::has-executed('setup')}">
+	<target name="stage" description="stages files for the release build" depends="compile" unless="${target::has-executed('stage')}">
 		<echo message="Moved files to staging area" />
     <copy todir="${output.staging.dir}\" failonerror="true" >
       <fileset basedir="..\Common\">
         <include name="License.txt" />
       </fileset>
     </copy>
+
+		<copy todir="${output.staging.dir}\" failonerror="true" >
+			<fileset basedir="..\Applications\InsightWpf\bin\Release">
+				<include name="**" />
+				<exclude name="**/*.scc" />
+				<exclude name="**/*.pdb" />
+				<exclude name="*.config" />
+				<exclude name="*.csproj" />
+				<exclude name="*.user" />
+				<exclude name="*.vspscc" />
+				<exclude name="*.bak" />
+				<exclude name="*.vs10x" />
+				<exclude name="*vshost.exe" />
+				<exclude name="*manifest" />
+		</fileset>
+		</copy>
+	</target>
+
+	<target name="zip" description="create the deliverable of the solution" failonerror="true">
+		<zip zipfile="Insight.zip">
+			<fileset basedir="${output.staging.dir}" prefix="">
+				<include name="${output.staging.dir}/**/*" />
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="deploy" description="deploys the deliverable to the ftp server">
+		<exec program="D:\BuildScripts\Insight\deploy.bat">
+		</exec>
 	</target>
   
 </project>

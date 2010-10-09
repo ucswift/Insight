@@ -10,13 +10,14 @@ namespace WaveTech.Insight.Services
 {
 	public class AnalysisService : IAnalysisService
 	{
-		public Dictionary<FileTypes, List<LocReport>> AnalyzeDirectory(string directoryPath)
+		public Dictionary<FileTypes, List<LocReport>> AnalyzeDirectory(string directoryPath, string validExtensions)
 		{
 			Dictionary<FileTypes, List<string>> preProcess = new Dictionary<FileTypes, List<string>>();
 			Dictionary<FileTypes, List<LocReport>> postProcess = new Dictionary<FileTypes, List<LocReport>>();
 
 			//string validExtensions = "*.cs,*.aspx,*.sql,*.xaml";
-			string validExtensions = "*.cs";
+			//string validExtensions = "*.cs";
+
 			string[] extFilter = validExtensions.Split(new char[] { ',' });
 
 			DirectoryInfo dirInfo = new DirectoryInfo(directoryPath);
@@ -25,7 +26,7 @@ namespace WaveTech.Insight.Services
 			{
 				switch (Path.GetExtension(extension))
 				{
-					case ".cs":
+					case "*.cs":
 						List<FileInfo> cSharpFiles = dirInfo.GetFiles(extension).ToList();
 						List<string> cSharpFilePaths = new List<string>();
 
@@ -34,11 +35,32 @@ namespace WaveTech.Insight.Services
 
 						preProcess.Add(FileTypes.CSharp, cSharpFilePaths);
 						break;
-					case ".aspx":
+					case "*.aspx":
+						List<FileInfo> aspxFiles = dirInfo.GetFiles(extension).ToList();
+						List<string> aspxFilePaths = new List<string>();
+
+						foreach (FileInfo fi in aspxFiles)
+							aspxFilePaths.Add(fi.FullName);
+
+						preProcess.Add(FileTypes.Aspx, aspxFilePaths);
 						break;
-					case ".sql":
+					case "*.sql":
+						List<FileInfo> sqlFiles = dirInfo.GetFiles(extension).ToList();
+						List<string> sqlFilePaths = new List<string>();
+
+						foreach (FileInfo fi in sqlFiles)
+							sqlFilePaths.Add(fi.FullName);
+
+						preProcess.Add(FileTypes.Sql, sqlFilePaths);
 						break;
-					case ".xaml":
+					case "*.xaml":
+						List<FileInfo> xamlFiles = dirInfo.GetFiles(extension).ToList();
+						List<string> xamlFilePaths = new List<string>();
+
+						foreach (FileInfo fi in xamlFiles)
+							xamlFilePaths.Add(fi.FullName);
+
+						preProcess.Add(FileTypes.Sql, xamlFilePaths);
 						break;
 					default:
 						break;
@@ -69,10 +91,16 @@ namespace WaveTech.Insight.Services
 					report = cSharpAnalyzer.CompileLocReport(filePath);
 					break;
 				case ".aspx":
+					ILocAnalyzer aspxAnalyzer = ObjectLocator.GetInstance<ILocAnalyzer>("AspxLocAnalyzer");
+					report = aspxAnalyzer.CompileLocReport(filePath);
 					break;
 				case ".sql":
+					ILocAnalyzer sqlAnalyzer = ObjectLocator.GetInstance<ILocAnalyzer>("SqlLocAnalyzer");
+					report = sqlAnalyzer.CompileLocReport(filePath);
 					break;
 				case ".xaml":
+					ILocAnalyzer xamlAnalyzer = ObjectLocator.GetInstance<ILocAnalyzer>("XamlLocAnalyzer");
+					report = xamlAnalyzer.CompileLocReport(filePath);
 					break;
 				default:
 					break;

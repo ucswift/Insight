@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using WaveTech.Insight.Framework;
 
 namespace WaveTech.Insight.Model
@@ -10,7 +11,7 @@ namespace WaveTech.Insight.Model
 		public string DirectoryRoot { get; set; }
 		public float CostPerHour { get; set; }
 
-		public DictionaryProxy<FileTypes, int> CodeWeighting { get; set; }
+		public DictionaryProxy<FileTypes, float> CodeWeighting { get; set; }
 		public DictionaryProxy<FileTypes, List<LocReport>> Sloc { get; set; }
 
 		public int WorkDayHours { get; set; }
@@ -22,8 +23,8 @@ namespace WaveTech.Insight.Model
 
 		public Project()
 		{
-			CodeWeighting = new DictionaryProxy<FileTypes, int>();
-			Sloc = new DictionaryProxy<FileTypes, List<LocReport>>();
+			CodeWeighting = new DictionaryProxy<FileTypes, float>(new Dictionary<FileTypes, float>());
+			Sloc = new DictionaryProxy<FileTypes, List<LocReport>>(new Dictionary<FileTypes, List<LocReport>>());
 
 			WorkDayHours = 8;
 			WorkDayPerMonth = 20;
@@ -31,6 +32,41 @@ namespace WaveTech.Insight.Model
 
 			EffortAdjustmentFactor = 0.6;
 			ProjectComplexity = 1.04;
+		}
+
+		public string GetExtensionsToProcess()
+		{
+			StringBuilder sb = new StringBuilder();
+
+			int i = 0;
+			foreach (var v in CodeWeighting.Original)
+			{
+				i++;
+
+				switch (v.Key)
+				{
+					case FileTypes.CSharp:
+						sb.Append("*.cs");
+						break;
+					case FileTypes.Aspx:
+						sb.Append("*.aspx");
+						break;
+					case FileTypes.Sql:
+						sb.Append("*.sql");
+						break;
+					case FileTypes.Xaml:
+						sb.Append("*.xaml");
+						break;
+					case FileTypes.Html:
+						sb.Append("*.html");
+						break;
+				}
+
+				if (i < CodeWeighting.Original.Count)
+					sb.Append(",");
+			}
+
+			return sb.ToString();
 		}
 
 		public int GetTotalLineCount(LineTypes lineType, FileTypes fileType, bool scale)

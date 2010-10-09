@@ -71,8 +71,8 @@
 
                         <odc:RibbonGroup Title="Project" odc:KeyTip.Key="GA">
 
-                            <odc:RibbonButton Content="Update" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"	LargeImage="img/Run-32x32.png"
-                                    Command="" />
+                            <odc:RibbonButton Content="Process" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"	LargeImage="img/Run-32x32.png"
+                                    Command="{x:Static local:Commands.ProcessCommand}" />
 
                             <odc:RibbonButton Content="Report" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"	LargeImage="img/Report-32x32.png"
                                     Command="" />
