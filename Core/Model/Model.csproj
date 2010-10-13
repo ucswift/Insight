@@ -50,6 +50,7 @@
       <Link>AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Analyzers\ILocAnalyzer.cs" />
+    <Compile Include="BaseObject.cs" />
     <Compile Include="FileTypes.cs" />
     <Compile Include="LineTypes.cs" />
     <Compile Include="LocReport.cs" />

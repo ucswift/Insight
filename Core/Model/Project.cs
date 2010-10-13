@@ -5,10 +5,10 @@ using WaveTech.Insight.Framework;
 
 namespace WaveTech.Insight.Model
 {
-	public class Project
+	public class Project : BaseObject
 	{
-		public string Name { get; set; }
-		public string DirectoryRoot { get; set; }
+		private string _name;
+		private string _directoryRoot;
 		public float CostPerHour { get; set; }
 
 		public DictionaryProxy<FileTypes, float> CodeWeighting { get; set; }
@@ -33,6 +33,43 @@ namespace WaveTech.Insight.Model
 			EffortAdjustmentFactor = 0.6;
 			ProjectComplexity = 1.04;
 		}
+
+
+		public string Name
+		{
+			get
+			{
+				return _name;
+			}
+
+			set
+			{
+				if (value != _name)
+				{
+					_name = value;
+					OnPropertyChanged("Name");
+				}
+			}
+		}
+
+		public string DirectoryRoot
+		{
+			get
+			{
+				return _directoryRoot;
+			}
+
+			set
+			{
+				if (value != _directoryRoot)
+				{
+					_directoryRoot = value;
+					OnPropertyChanged("DirectoryRoot");
+				}
+			}
+		}
+
+
 
 		public string GetExtensionsToProcess()
 		{

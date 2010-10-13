@@ -92,6 +92,8 @@ namespace WaveTech.Insight.InsightWpf
 				IProjectService projectService = ObjectLocator.GetInstance<IProjectService>();
 
 				Project prj = projectService.GetProject(filePath);
+				prj.CodeWeighting.Original = prj.CodeWeighting.ToDictionary();
+
 				UIContext.Project = prj;
 
 				MainWindow mainWindow = (MainWindow)sender;

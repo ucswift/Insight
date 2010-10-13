@@ -5,3 +5,17 @@ G:\Projects\InsightEstimator\Tests\TestHarness\bin\Debug\WaveTech.Insight.Model.
 G:\Projects\InsightEstimator\Tests\TestHarness\bin\Debug\WaveTech.Insight.Model.pdb
 G:\Projects\InsightEstimator\Tests\TestHarness\obj\x86\Debug\TestHarness.exe
 G:\Projects\InsightEstimator\Tests\TestHarness\obj\x86\Debug\TestHarness.pdb
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\TestHarness.exe
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\TestHarness.pdb
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Services.dll
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\StructureMap.dll
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Framework.pdb
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\Insight\Tests\TestHarness\bin\Debug\WaveTech.Insight.Services.pdb
+G:\Projects\Insight\Tests\TestHarness\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projects\Insight\Tests\TestHarness\obj\x86\Debug\TestHarness.exe
+G:\Projects\Insight\Tests\TestHarness\obj\x86\Debug\TestHarness.pdb

@@ -57,6 +57,15 @@
 		</exec>
 	</target>
 
+	<target name="test" description="runs the unit tests" depends="compile" unless="${target::has-executed('test')}">
+		<echo message="run the unit tests" level="Info" />
+	<nunit2>
+		<formatter type="Plain" />
+		<test assemblyname="MyProject.Tests.dll" appconfig="MyProject.Tests.dll.config" />
+	</nunit2>
+	</target>
+
+
 	<target name="stage" description="stages files for the release build" depends="compile" unless="${target::has-executed('stage')}">
 		<echo message="Moved files to staging area" />
     <copy todir="${output.staging.dir}\" failonerror="true" >

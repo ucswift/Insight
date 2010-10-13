@@ -6,3 +6,12 @@ G:\Projects\InsightEstimator\Core\Analyzers\obj\Debug\ResolveAssemblyReference.c
 G:\Projects\InsightEstimator\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.dll
 G:\Projects\InsightEstimator\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.pdb
 G:\Projects\InsightEstimator\Core\Analyzers\bin\Debug\StructureMap.dll
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Analyzers.pdb
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Model.dll
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Framework.dll
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Model.pdb
+G:\Projects\Insight\Core\Analyzers\bin\Debug\WaveTech.Insight.Framework.pdb
+G:\Projects\Insight\Core\Analyzers\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\Insight\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.dll
+G:\Projects\Insight\Core\Analyzers\obj\Debug\WaveTech.Insight.Analyzers.pdb

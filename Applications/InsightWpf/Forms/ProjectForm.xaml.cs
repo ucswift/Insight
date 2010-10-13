@@ -35,7 +35,32 @@ namespace WaveTech.Insight.InsightWpf.Forms
 		{
 			InitializeComponent();
 			WindowHelper.CheckAndApplyTheme(this);
+
+			SetupProject();
+			this.DataContext = UIContext.Project;
 		}
+
+		private void SetupProject()
+		{
+			if (UIContext.Project != null)
+			{
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.CSharp).Count() > 0)
+					chkCSharp.IsChecked = true;
+
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Xaml).Count() > 0)
+					chkXaml.IsChecked = true;
+
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Aspx).Count() > 0)
+					chkAspx.IsChecked = true;
+
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Html).Count() > 0)
+					chkHtml.IsChecked = true;
+
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Sql).Count() > 0)
+					chkSql.IsChecked = true;
+			}
+		}
+
 
 		private void ComplexityRadioButton_Click(object sender, RoutedEventArgs e)
 		{
@@ -51,14 +76,14 @@ namespace WaveTech.Insight.InsightWpf.Forms
 		{
 			if (chkCSharp.IsChecked.Value)
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.CSharp).Count() <= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.CSharp).Count() <= 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Add(FileTypes.CSharp, ConvertExperiance(exprCSharp.Experience));
 				}
 			}
 			else
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.CSharp).Count() >= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.CSharp).Count() > 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Remove(FileTypes.CSharp);
 				}
@@ -69,14 +94,14 @@ namespace WaveTech.Insight.InsightWpf.Forms
 		{
 			if (chkXaml.IsChecked.Value)
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Xaml).Count() <= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Xaml).Count() <= 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Add(FileTypes.Xaml, ConvertExperiance(exprXaml.Experience));
 				}
 			}
 			else
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Xaml).Count() >= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Xaml).Count() > 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Remove(FileTypes.Xaml);
 				}
@@ -87,14 +112,14 @@ namespace WaveTech.Insight.InsightWpf.Forms
 		{
 			if (chkAspx.IsChecked.Value)
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Aspx).Count() <= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Aspx).Count() <= 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Add(FileTypes.Aspx, ConvertExperiance(exprAspx.Experience));
 				}
 			}
 			else
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Aspx).Count() >= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Aspx).Count() > 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Remove(FileTypes.Aspx);
 				}
@@ -105,14 +130,14 @@ namespace WaveTech.Insight.InsightWpf.Forms
 		{
 			if (chkHtml.IsChecked.Value)
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Html).Count() <= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Html).Count() <= 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Add(FileTypes.Html, ConvertExperiance(exprHtml.Experience));
 				}
 			}
 			else
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Html).Count() >= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Html).Count() > 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Remove(FileTypes.Html);
 				}
@@ -123,17 +148,29 @@ namespace WaveTech.Insight.InsightWpf.Forms
 		{
 			if (chkSql.IsChecked.Value)
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Sql).Count() <= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Sql).Count() <= 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Add(FileTypes.Sql, ConvertExperiance(exprSql.Experience));
 				}
 			}
 			else
 			{
-				if (UIContext.Project.CodeWeighting.Original.Where(x => x.Key == FileTypes.Sql).Count() >= 0)
+				if (UIContext.Project.CodeWeighting.KeysAndValues.Where(x => x.Key == FileTypes.Sql).Count() > 0)
 				{
 					UIContext.Project.CodeWeighting.Original.Remove(FileTypes.Sql);
 				}
+			}
+		}
+
+		private void btnBrowseForDirectory_Click(object sender, RoutedEventArgs e)
+		{
+			System.Windows.Forms.FolderBrowserDialog fbDialog = new System.Windows.Forms.FolderBrowserDialog();
+			fbDialog.Description = "Select a Folder";
+			fbDialog.ShowNewFolderButton = false;
+
+			if (fbDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			{
+				UIContext.Project.DirectoryRoot = fbDialog.SelectedPath;
 			}
 		}
 	}
